@@ -1,0 +1,128 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 1/12/21 1:33 AM
+Description: Unexpected error
+
+java.lang.IndexOutOfBoundsException: Index: 102, Size: 46
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at net.minecraft.inventory.Container.slotClick(Container.java:258)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:566)
+	at net.switchhelper.client.listener.EventListener.moveItemToSlot(EventListener.java:38)
+	at net.switchhelper.client.listener.EventListener.onKeyInput(EventListener.java:27)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_13_EventListener_onKeyInput_KeyInputEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.fireKeyInput(FMLCommonHandler.java:565)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2017)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1808)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1098)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at net.minecraft.inventory.Container.slotClick(Container.java:258)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:566)
+	at net.switchhelper.client.listener.EventListener.moveItemToSlot(EventListener.java:38)
+	at net.switchhelper.client.listener.EventListener.onKeyInput(EventListener.java:27)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_13_EventListener_onKeyInput_KeyInputEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.fml.common.FMLCommonHandler.fireKeyInput(FMLCommonHandler.java:565)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2017)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player983'/97, l='MpServer', x=1371.50, y=4.00, z=-1909.38]]
+	Chunk stats: MultiplayerChunkCache: 594, 594
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1427,4,-1848), Chunk: (at 3,0,8 in 89,-116; contains blocks 1424,0,-1856 to 1439,255,-1841), Region: (2,-4; contains chunks 64,-128 to 95,-97, blocks 1024,0,-2048 to 1535,255,-1537)
+	Level time: 8624 game time, 8624 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 18 total; [EntityChicken['Chicken'/2, l='MpServer', x=1369.78, y=4.00, z=-1871.25], EntityCow['Cow'/3, l='MpServer', x=1372.22, y=4.00, z=-1856.38], EntityPig['Pig'/4, l='MpServer', x=1374.48, y=4.00, z=-1833.23], EntitySheep['Sheep'/5, l='MpServer', x=1371.76, y=4.00, z=-1833.60], EntityCow['Cow'/40, l='MpServer', x=1396.19, y=4.00, z=-1901.28], EntityPig['Pig'/41, l='MpServer', x=1405.28, y=4.00, z=-1861.57], EntitySheep['Sheep'/42, l='MpServer', x=1397.18, y=4.00, z=-1869.30], EntitySheep['Sheep'/43, l='MpServer', x=1390.28, y=4.00, z=-1842.17], EntityPig['Pig'/15, l='MpServer', x=1388.36, y=4.00, z=-1904.62], EntitySheep['Sheep'/16, l='MpServer', x=1378.16, y=4.00, z=-1871.30], EntityChicken['Chicken'/17, l='MpServer', x=1377.57, y=4.00, z=-1868.28], EntityItem['item.item.egg'/18, l='MpServer', x=1379.70, y=4.00, z=-1858.38], EntityPlayerSP['Player983'/97, l='MpServer', x=1371.50, y=4.00, z=-1909.38], EntitySheep['Sheep'/51, l='MpServer', x=1426.89, y=4.00, z=-1913.61], EntitySheep['Sheep'/52, l='MpServer', x=1437.60, y=4.00, z=-1933.34], EntitySheep['Sheep'/53, l='MpServer', x=1447.38, y=4.00, z=-1931.26], EntitySheep['Sheep'/54, l='MpServer', x=1440.32, y=4.00, z=-1911.83], EntitySheep['Sheep'/56, l='MpServer', x=1440.67, y=4.00, z=-1894.76]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:420)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2741)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:427)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.legacydev.Main.start(Main.java:86)
+	at net.minecraftforge.legacydev.MainClient.main(MainClient.java:29)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_271, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 417590136 bytes (398 MB) / 941621248 bytes (898 MB) up to 1897922560 bytes (1810 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2854 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID           | Version      | Source                                                             | Signature |
+	|:------ |:------------ |:------------ |:------------------------------------------------------------------ |:--------- |
+	| LCHIJA | minecraft    | 1.12.2       | minecraft.jar                                                      | None      |
+	| LCHIJA | mcp          | 9.42         | minecraft.jar                                                      | None      |
+	| LCHIJA | FML          | 8.0.99.99    | forge-1.12.2-14.23.5.2854_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | forge        | 14.23.5.2854 | forge-1.12.2-14.23.5.2854_mapped_snapshot_20171003-1.12-recomp.jar | None      |
+	| LCHIJA | switchhelper | 0.0.1        | main                                                               | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 460.89' Renderer: 'GeForce GTX 1060 3GB/PCIe/SSE2'
+	Launched Version: ${MC_VERSION}
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1060 3GB/PCIe/SSE2 GL version 4.6.0 NVIDIA 460.89, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz

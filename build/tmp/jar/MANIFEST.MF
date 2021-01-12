@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: SwitchHelper
+Implementation-Version: 1.0
+Specification-Vendor: examplemodsareus
+Specification-Title: examplemod
+Implementation-Timestamp: 2021-01-12T03:12:29+0000
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+
